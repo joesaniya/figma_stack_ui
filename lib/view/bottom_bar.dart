@@ -17,7 +17,6 @@ class BottomBar extends StatefulWidget {
 class _BottomBarState extends State<BottomBar> {
   int selectBtn = 0;
 
-  // Define the screens for each tab
   final List<Widget> _screens = [
     HomePage(),
     Center(child: Text('Connect Screen')),
