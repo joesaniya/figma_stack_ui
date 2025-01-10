@@ -40,16 +40,28 @@ class CardWidgets extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 10, vertical: 5),
                       decoration: BoxDecoration(
-                        color: Colors.purple,
-                        borderRadius: BorderRadius.circular(12),
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(5),
                       ),
-                      child: const Text(
-                        'New',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      child: Row(
+                        children: [
+                          Icon(
+                            Icons.circle,
+                            color: Colors.purple,
+                            size: 10,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          const Text(
+                            'New',
+                            style: TextStyle(
+                              color: Colors.purple,
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
