@@ -1,4 +1,4 @@
-class Model {
+/*class Model {
   final int id;
   final String imagePath;
   final String name;
@@ -17,3 +17,13 @@ List<Model> navBtn = [
   Model(id: 3, imagePath: 'assets/icon/notification.png', name: 'notification'),
   Model(id: 4, imagePath: 'assets/icon/user.png', name: 'Profile'),
 ];
+
+*/
+import 'package:flutter/material.dart';
+
+class NavButton {
+  final String name;
+  final IconData iconData;
+
+  NavButton({required this.name, required this.iconData});
+}

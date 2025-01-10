@@ -26,6 +26,14 @@ class _BottomBarState extends State<BottomBar> {
     Center(child: Text('Profile Screen')),
   ];
 
+  final List<NavButton> navBtn = [
+    NavButton(name: 'Deals', iconData: Icons.local_offer_outlined),
+    NavButton(name: 'Connect', iconData: Icons.people_outline),
+    NavButton(name: 'Portfolio', iconData: Icons.work_outline),
+    NavButton(name: 'Messages', iconData: Icons.message_outlined),
+    NavButton(name: 'Profile', iconData: Icons.person_outline),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,9 +45,6 @@ class _BottomBarState extends State<BottomBar> {
             alignment: Alignment.bottomCenter,
             child: navigationBar(),
           ),
-          /* SizedBox(
-            height: 5,
-          )*/
         ],
       ),
     );
@@ -71,7 +76,7 @@ class _BottomBarState extends State<BottomBar> {
   }
 
   SizedBox iconBtn(int i) {
-    bool isActive = selectBtn == i ? true : false;
+    bool isActive = selectBtn == i;
     var height = isActive ? 60.0 : 0.0;
     var width = isActive ? 50.0 : 0.0;
     return SizedBox(
@@ -93,10 +98,10 @@ class _BottomBarState extends State<BottomBar> {
           ),
           Align(
             alignment: Alignment.center,
-            child: Image.asset(
-              navBtn[i].imagePath,
+            child: Icon(
+              navBtn[i].iconData, // Use IconData instead of an image
               color: isActive ? selectColor : black,
-              scale: 2,
+              size: 24.0, // Adjust the icon size
             ),
           ),
           Align(
@@ -105,7 +110,7 @@ class _BottomBarState extends State<BottomBar> {
               navBtn[i].name,
               style: isActive ? bntText.copyWith(color: selectColor) : bntText,
             ),
-          )
+          ),
         ],
       ),
     );
