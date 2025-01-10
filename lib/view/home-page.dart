@@ -1,5 +1,5 @@
-import 'package:figma_ui/card_widgets.dart';
-import 'package:figma_ui/upcoming_events_card.dart';
+import 'package:figma_ui/widgets/card_widgets.dart';
+import 'package:figma_ui/widgets/upcoming_events_card.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {

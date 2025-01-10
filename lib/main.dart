@@ -1,4 +1,5 @@
-import 'package:figma_ui/home-page.dart';
+import 'package:figma_ui/view/bottom_bar.dart';
+import 'package:figma_ui/view/home-page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,9 +11,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: BottomBar(),
+      // home: HomePage(),
     );
   }
 }
